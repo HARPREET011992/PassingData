@@ -14,11 +14,11 @@ class ViewController: UIViewController ,CanReceive{
     @IBOutlet weak var TextField1: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
    
     }
-    @IBAction func ChangeBlue(_ sender: Any) {
-        view.backgroundColor = UIColor.brown
+    func textFieldDidBeginEditing(textField: UITextField) {
+        TextField1.text = ""
     }
     @IBAction func SEND(_ sender: UIButton) {
     performSegue(withIdentifier: "SEND", sender:self)

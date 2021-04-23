@@ -26,5 +26,8 @@ class SecondViewController: UIViewController {
      delegate?.dataReceived(data: TextField.text!)
         dismiss(animated: true, completion: nil)
     }
+    func textFieldDidBeginEditing(textField: UITextField) {
+        TextField.text = ""
+    }
 
 }
